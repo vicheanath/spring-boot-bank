@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("api/v1/users")
 public class UserController {
 
     @Autowired
@@ -18,5 +18,9 @@ public class UserController {
     @PostMapping
     public BankResponse createAccount(@RequestBody UserRequest userRequest){
         return userService.createAccount(userRequest);
+    }
+    @PostMapping("/login")
+    public BankResponse login(@RequestBody UserRequest userRequest){
+        return userService.login(userRequest);
     }
 }

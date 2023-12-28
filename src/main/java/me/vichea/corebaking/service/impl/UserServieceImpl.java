@@ -60,4 +60,31 @@ public class UserServieceImpl implements UserService{
                         .build())
                 .build();
     }
+
+    /**
+     * Login to account
+     * @return BankResponse
+     */
+
+    @Override
+    public BankResponse login(UserRequest userRequest) {
+        User user = userRepository.findByEmail(userRequest.getEmail());
+        if (user == null){
+            return BankResponse.builder()
+                    .responseCode(AccountUtils.ACCOUNT_NOT_FOUND_CODE)
+                    .responseMessage(AccountUtils.ACCOUNT_NOT_FOUND_MESSAGE)
+                    .accountInfo(null)
+                    .build();
+        }
+        return BankResponse.builder()
+                .responseCode(AccountUtils.ACCOUNT_FOUND_CODE)
+                .responseMessage(AccountUtils.ACCOUNT_FOUND_MESSAGE)
+                .accountInfo(AccountInfo.builder()
+                        .accountBalance(user.getAccountBalance())
+                        .accountNumber(user.getAccountNumber())
+                        .accountName(user.getFirstName())
+                        .build())
+                .build();
+    }
+
 }

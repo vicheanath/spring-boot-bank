@@ -6,4 +6,6 @@ import me.vichea.corebaking.dto.UserRequest;
 public interface UserService {
 
     BankResponse createAccount(UserRequest userRequest);
+
+    BankResponse login(UserRequest userRequest);
 }
