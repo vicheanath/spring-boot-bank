@@ -2,12 +2,12 @@ package me.vichea.corebaking.controller;
 
 import me.vichea.corebaking.dto.BankResponse;
 import me.vichea.corebaking.dto.UserRequest;
+import me.vichea.corebaking.entity.User;
 import me.vichea.corebaking.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/users")
@@ -22,5 +22,10 @@ public class UserController {
     @PostMapping("/login")
     public BankResponse login(@RequestBody UserRequest userRequest){
         return userService.login(userRequest);
+    }
+
+    @GetMapping
+    public List<User> getAllUsers(){
+        return userService.getAllUsers();
     }
 }
