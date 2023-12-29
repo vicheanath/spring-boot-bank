@@ -9,21 +9,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class UserService {
 
-    User getUserDetails(String email) {
-        return null;
-    }
 
-    User createUser(User userDetails) {
-        return null;
-    }
-
-    void updateUser(User userDetails) {
-
-    }
-
-    void deleteUser(User userDetails) {
-
-    }
 
 
 }
