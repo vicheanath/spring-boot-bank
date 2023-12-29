@@ -24,36 +24,5 @@ public class IAMService {
 
 
 
-    User createUser(User userDetails) {
-        return null;
-    }
-
-    void assignRole(User user, Role role) {
-
-    }
-
-    void removeRole(User user, Role role) {
-
-    }
-
-    void assignPermission(Role role, String permission) {
-
-    }
-
-    void removePermission(Role role, String permission) {
-
-    }
-
-    boolean authenticateUser(String username, String password) {
-        return false;
-    }
-
-    boolean authorize(User user, String permission) {
-        return false;
-    }
-
-
-
-
 
 }
