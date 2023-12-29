@@ -1,0 +1,7 @@
+package me.vichea.corebaking.repository;
+
+import me.vichea.corebaking.entity.Card;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CardRepository  extends JpaRepository<Card, Long> {
+}

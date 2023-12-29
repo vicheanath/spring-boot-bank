@@ -13,15 +13,19 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Entity
-public class User {
+public class Card {
+//    -cardNumber: String
+//    -expiryDate: Date
+//    -cardType: String
+//    -status: String
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
-    private String username;
-    private String password;
-    private UserStatus status;
+    private String cardNumber;
+    private LocalDateTime expiryDate;
+    private CardType cardType;
+    private CardStatus status;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Role role;
+    @JoinColumn(name = "account_id", nullable = false)
+    private Account accountHolder;
     @CreationTimestamp
     private LocalDateTime createdAt;
     @UpdateTimestamp
