@@ -1,31 +1,36 @@
 package me.vichea.corebaking.service.impl;
 
+import lombok.AllArgsConstructor;
+import me.vichea.corebaking.entity.User;
+import me.vichea.corebaking.repository.UserRepository;
 import me.vichea.corebaking.service.UserService;
-import org.springframework.security.core.userdetails.User;
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.Optional;
 
-public class UserServiceImpl implements UserService {
+@AllArgsConstructor
 
+public class UserServiceImpl implements UserService {
+    private final UserRepository userRepository;
     @Override
-    public Optional<User> findById(long id) {
-        return Optional.empty();
+    public Optional<User> findById(Long id) {
+        return Optional.ofNullable(userRepository.findById(id).orElse(null));
     }
 
     @Override
     public User findByEmail(String email) {
-        return null;
+        return userRepository.findByEmail(email);
     }
 
     @Override
     public User save(User user) {
-        return null;
+        return userRepository.save(user);
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+            return userRepository.findByUsername(username);
     }
 }
