@@ -11,23 +11,32 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
+@Table(name = "card")
 public class Card {
-//    -cardNumber: String
-//    -expiryDate: Date
-//    -cardType: String
-//    -status: String
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long cardId;
+    @Column(unique = true)
     private String cardNumber;
     private LocalDateTime expiryDate;
-    private CardType cardType;
+    private String cvv;
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "card_provider_id", nullable = false)
+    private CardProvider cardProvider;
+
+    @Enumerated(EnumType.STRING)
     private CardStatus status;
+    private Double limitTransactionPerDay;
+
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id", nullable = false)
     private Account accountHolder;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
+
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 

@@ -1,11 +1,17 @@
 server:
   port: 8080
 spring:
+  application:
+    name: core-banking
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    password:
-    url: jdbc:mysql://localhost:3306/core-banking
-    username: root
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/core-banking
+    username: postgres
   jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
       hibernate:
-        ddl-auto: update
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
