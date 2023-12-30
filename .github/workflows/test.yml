@@ -23,16 +23,11 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          DB_NAME: core-banking
+          POSTGRES_DB: core-banking
         ports:
           - 5432:5432
-        options: sh -c "
-            while ! pg_isready -h postgres -p 5432 -q -U postgres; do
-                echo 'Waiting for postgres...';
-                sleep 2;
-            done;
-            psql -h postgres -U postgres -c 'IF NOT EXISTS (SELECT * FROM pg_database WHERE datname = ''core-banking'') CREATE DATABASE core-banking;'"
 
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
       - uses: actions/checkout@v3
