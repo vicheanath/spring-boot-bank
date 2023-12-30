@@ -1,4 +1,101 @@
-## Spring Boot Playground build with Github Action and Unit Test
+# Spring Boot Playground build with Github Action and Unit Test
+
+## Service:
+- [ ] User Authentication
+    - [ ] User Registration
+    - [ ] User Login
+    - [ ] User Logout
+    - [ ] User Password Reset
+    - [ ] User Password Change
+    - [ ] User Profile Update
+    - [ ] User Profile Delete
+    - [ ] User Profile View
+    - [ ] User Profile Search
+- [ ] User Authorization
+    - [ ] Role Management
+    - [ ] Permission Management
+    - [ ] Role Assignment
+    - [ ] Permission Assignment
+    - [ ] Role Removal
+    - [ ] Permission Removal
+    - [ ] Role Search
+    - [ ] Permission Search
+- [ ] User Management
+  - [ ] User Creation
+  - [ ] User Update
+  - [ ] User Deletion
+  - [ ] User Search
+  - [ ] User View
+- [ ] Account Management
+  - [ ] Account Creation
+  - [ ] Account Update
+  - [ ] Account Deletion
+  - [ ] Account Search
+  - [ ] Account View
+- [ ] Card Management
+  - [ ] Card Creation
+  - [ ] Card Update
+  - [ ] Card Deletion
+  - [ ] Card Search
+- [ ] Transaction Management
+    - [ ] Transaction Creation
+    - [ ] Transaction Update
+    - [ ] Transaction Deletion
+    - [ ] Transaction Search
+    - [ ] Transaction View
+- [ ] Loan Management
+    - [ ] Loan Application
+    - [ ] Loan Approval
+    - [ ] Loan Rejection
+    - [ ] Loan Search
+    - [ ] Loan View
+    - [ ] Apply for Loan
+    - [ ] Loan Repayment
+    - [ ] Loan Application Status Update
+    - [ ] Loan Application Approval
+- [ ] Loan Application Management
+    - [ ] Loan Application Form
+    - [ ] Document Upload
+    - [ ] Loan Application Status Tracking
+    - [ ] Credit Check Integration
+    - [ ] Loan Application Approval Workflow
+    - [ ] Payment Schedule Generation
+    - [ ] Reporting and Analytics
+- [ ] Bank Management
+- [ ] Branch Management
+- [ ] Payment Management
+- [ ] Payment Gateway Management
+- [ ] Fraud Prevention Management
+  - [ ] Geolocation Tracking
+  - [ ] Device Recognition
+  - [ ] IP Address Tracking
+  - [ ] Card Verification Value (CVV) Check
+  - [ ] Machine Learning Based Fraud Detection
+  - [ ] Transaction Monitoring
+- [ ] Notification Management 
+    - [ ] Notification Creation
+    - [ ] Notification Update
+    - [ ] Notification Deletion
+    - [ ] Notification Search
+- [ ] IAM Management
+- [ ] Security Management
+- [ ] Risk Management
+- [ ] Compliance Management
+- [ ] Interest Calculation Management
+   - [ ] Interest Rate Type  (Fixed, Variable, Compound, Simple)
+   - [ ] Interest Rate Adjustment
+   - [ ] Interest Rate Calculation Frequency (Daily, Weekly, Monthly, Quarterly, Yearly)
+- [ ] Card Issuing Management
+- [ ] Account Type Management
+- [ ] Role Management
+- [ ] Permission Management
+- [ ] User Details Management
+- [ ] SEPA Payment Gateway
+- [ ] FPS Payment Gateway
+- [ ] SWIFT Payment Gateway
+- [ ] Proprietary Payment Gateway
+- [ ] Card Fraud Detection
+
 
 ```mermaid
 classDiagram
