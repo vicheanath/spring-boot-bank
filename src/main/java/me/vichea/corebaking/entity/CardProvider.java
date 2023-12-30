@@ -8,12 +8,16 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "permission")
-public class Permission {
+@Table(name = "card_provider")
+public class CardProvider {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long permissionId;
-    private String code;
-    private String name;
+    private Long cardProviderId;
+    private String cardProviderName;
     private String description;
+    private String code;
+    private String logo;
+    private String status;
+
 }

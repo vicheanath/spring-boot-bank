@@ -13,7 +13,7 @@ import lombok.*;
 @AllArgsConstructor
 @Entity
 public class Customer extends User {
-    @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long customerId;
     private String firstName;

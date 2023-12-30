@@ -5,11 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-
-public class CoreBakingApplication {
+public class CoreBankingApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CoreBakingApplication.class, args);
+        SpringApplication.run(CoreBankingApplication.class, args);
     }
 
 }

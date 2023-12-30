@@ -1,8 +1,6 @@
-package me.vichea.corebaking.service;
+package me.vichea.corebaking.service.impl;
 
 import lombok.AllArgsConstructor;
-import me.vichea.corebaking.entity.Role;
-import me.vichea.corebaking.entity.User;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,7 +18,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @AllArgsConstructor
-public class IAMService {
+public class IAMServiceImpl {
 
 
 
