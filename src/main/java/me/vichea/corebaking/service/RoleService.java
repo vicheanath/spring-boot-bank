@@ -5,5 +5,5 @@ import me.vichea.corebaking.entity.Role;
 
 public interface RoleService {
     Role findByName(String name);
-    Role save(RoleRequest role);
+    Role save(Role role);
 }
