@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class Card  extends AbstractAuditable<Account, Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cardId;
+    private Long id;
     @Column(unique = true)
     private String cardNumber;
     private LocalDateTime expiryDate;
