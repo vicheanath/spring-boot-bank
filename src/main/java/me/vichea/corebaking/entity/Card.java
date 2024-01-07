@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.jpa.domain.AbstractAuditable;
 
 import java.time.LocalDateTime;
 
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "card")
-public class Card {
+public class Card  extends AbstractAuditable<Account, Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cardId;

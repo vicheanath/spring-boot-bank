@@ -1,4 +1,4 @@
-package me.vichea.corebaking.service.impl;
+package me.vichea.corebaking.service;
 
 import me.vichea.corebaking.entity.User;
 
