@@ -7,21 +7,22 @@ import me.vichea.corebaking.service.UserService;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Service
 @AllArgsConstructor
-
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     @Override
     public Optional<User> findById(Long id) {
-        return Optional.ofNullable(userRepository.findById(id).orElse(null));
+        return userRepository.findById(id);
     }
 
     @Override
-    public User findByEmail(String email) {
-        return userRepository.findByEmail(email);
+    public User findByUsername(String username){
+        return userRepository.findByUsername(username);
     }
 
     @Override
