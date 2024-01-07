@@ -10,12 +10,13 @@ import java.util.Collection;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "role")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long roleId;
-    private String roleName;
+    private String name;
     private String code;
     private String description;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
