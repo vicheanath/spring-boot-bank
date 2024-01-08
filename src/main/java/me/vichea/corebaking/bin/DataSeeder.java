@@ -53,7 +53,7 @@ public class DataSeeder implements CommandLineRunner {
         }
         System.out.println("roles = " + roles);
 
-        //TODO: Assign permissions to roles
+        //TODO: Assign permissions to roles abc
 
         System.out.println("DataSeeder.run - END");
 
