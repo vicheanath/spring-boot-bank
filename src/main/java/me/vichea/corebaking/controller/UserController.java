@@ -29,7 +29,11 @@ public class UserController {
             ModelMapper modelMapper = new ModelMapper();
             User user = modelMapper.map(userSignUpRequest, User.class);
             SignUpResponse signUpResponse = modelMapper.map(userService.signUp(user), SignUpResponse.class);
-            return new CommonResult<>(HttpStatus.OK.value(), "User created successfully", signUpResponse);
+            if (signUpResponse != null) {
+                return CommonResult.success(signUpResponse);
+            } else {
+                return CommonResult.failed("User already exists");
+            }
 
         }
 

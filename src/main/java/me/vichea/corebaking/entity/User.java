@@ -2,29 +2,26 @@ package me.vichea.corebaking.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.jpa.domain.AbstractAuditable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Builder
+@Entity
 @Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = "username")})
-public class User extends AbstractAuditable<User, Long> implements UserDetails {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+public class User implements UserDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @Column(unique = true)
     private String username;
     private String password;
+    @Column(unique = true)
     private String email;
     private UserStatus status;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
