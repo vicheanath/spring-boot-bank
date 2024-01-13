@@ -19,7 +19,7 @@ public class Role {
     private String name;
     private String code;
     private String description;
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
     @JoinTable(
             name = "role_permission",
             joinColumns = {@JoinColumn(name = "role_id")},

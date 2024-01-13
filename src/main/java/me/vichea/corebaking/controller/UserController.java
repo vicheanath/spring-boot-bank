@@ -1,5 +1,7 @@
 package me.vichea.corebaking.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import me.vichea.corebaking.common.CommonResult;
 import me.vichea.corebaking.dto.SignUpRequest;
@@ -16,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/users")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "Bearer Authentication")
 public class UserController {
 
         private final UserService userService;
