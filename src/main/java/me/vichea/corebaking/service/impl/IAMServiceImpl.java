@@ -8,7 +8,6 @@ import me.vichea.corebaking.repository.PermissionRepository;
 import me.vichea.corebaking.repository.RoleRepository;
 import me.vichea.corebaking.repository.UserRepository;
 import me.vichea.corebaking.service.IAMService;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;

@@ -1,10 +1,6 @@
 package me.vichea.corebaking.service.impl;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import me.vichea.corebaking.dto.SignUpRequest;
-import me.vichea.corebaking.dto.SignUpResponse;
-import me.vichea.corebaking.entity.Role;
 import me.vichea.corebaking.entity.User;
 import me.vichea.corebaking.repository.UserRepository;
 import me.vichea.corebaking.service.UserService;
